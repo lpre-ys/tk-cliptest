@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>クリップボードサンプル</title>
+    <script src="front.js"></script>
+  </head>
+  <body>
+    <h1>クリップボードサンプル</h1>
+    <p>
+      ツクール2000の戦闘アニメをコピーし、<br />
+      「読み込み」を押すと、戦闘アニメの名前を表示します。
+    </p>
+    <p>
+      <b>その後</b>、名前欄を書き換えて「書き込み」を押すと、<br />
+      書き替え後の名前でクリップボードにデータを書き込みます。<br />
+      （ツクール側に貼り付けてご確認ください）
+    </p>
+    <small>
+      注意：サンプルなので、エラーチェックとバリデーションは殆どありません。<br />
+      異常系の挙動は一切保証しませんので、ご注意ください。
+    </small>
+    <hr />
+    <form>
+      <button type="button" name="load" id="read">読み込み</button>
+      <button type="button" name="write" id="write">書き込み</button>
+      <input type="type" id="title" size="30" />
+    </form>
+    <p id="msg"></p>
+  </body>
+</html>
